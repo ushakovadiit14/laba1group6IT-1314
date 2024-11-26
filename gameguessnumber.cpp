@@ -46,6 +46,8 @@ int main(){
         a = b;
         b = c;
     }
+    int num=randomnum(a, b);
+    game(num);
     
     
 }
