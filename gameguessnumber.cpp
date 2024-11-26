@@ -1,5 +1,13 @@
 #include <iostream>
+#include <ctime>
 using namespace std;
+
+int randomnum(int a, int b)
+{
+    srand((time(0))); 
+    int random_number = rand() % a + (b-a); // создание случайного числа в заданном диапазоне 
+    return random_number;
+}
 
 int main(){
     cout << ""; // правила игры
