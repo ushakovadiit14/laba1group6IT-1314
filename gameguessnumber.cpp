@@ -9,6 +9,30 @@ int randomnum(int a, int b)
     return random_number;
 }
 
+int game(int num)
+{
+    int guess, count;
+    cout << "";
+    cin >> guess;
+    count++;
+    if (guess == num)     //если загаданное число совпадает с введенным, то выводится победная фраза и количество попыток
+    {
+        cout << "" << endl;
+        cout << "" << count;
+    }
+    else    //проверки на то, больше или меньше ли введенное число по сравнению с загаданным.
+    {
+        if (guess < num)
+        {
+            cout << "" << endl;
+        }
+        else
+        {
+            cout << "" << endl;
+        }
+    }
+}
+
 int main(){
     cout << ""; // правила игры
     int a, b, num;
