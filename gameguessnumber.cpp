@@ -9,7 +9,7 @@ int randomnum(int a, int b)
     return random_number;
 }
 
-int game(int num)
+void game(int num)
 {
     int guess, count;
     cout << "";
@@ -48,6 +48,4 @@ int main(){
     }
     int num=randomnum(a, b);
     game(num);
-    
-    
 }
