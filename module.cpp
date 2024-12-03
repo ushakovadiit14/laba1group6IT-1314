@@ -12,24 +12,24 @@ int randomnum(int a, int b)
 void game(int num)
 {
     int guess, count = 1;
-    cout << "";
+    cout << "Введите предполагаемое число: ";
     cin >> guess;
     while (guess != num)
     {
         if (guess < num)
         {
-            cout << "больше" << endl;
+            cout << "Загаданное число больше.Попробуйте ещё раз." << endl;
         }
         else
         {
-            cout << "меньше" << endl;
+            cout << "Загаданное число меньше.Попробуйте ещё раз." << endl;
         }
         count++;
         cin >> guess;
     }
     if (guess == num)     //если загаданное число совпадает с введенным, то выводится победная фраза и количество попыток
     {
-        cout << "" << endl;
-        cout << "" << count;
+        cout << "Вы выиграли!!!" << endl;
+        cout << "Количество попыток: " << count;
     }
 }
