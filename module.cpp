@@ -9,6 +9,16 @@ int randomnum(int a, int b)
     return random_number;
 }
 
+bool nebukvi (const string &input) {
+    for (char ch : input) {
+        if (!isdigit(ch)) { // Проверяем, является ли символ цифрой
+            cout << "Ошибка: Ввод должен содержать только цифры." << endl;
+            return false;
+        }
+    }
+    return true;
+}
+
 void game(int num)
 {
     int guess, count = 1;
