@@ -20,7 +20,7 @@ bool nebukvi(const string& input) {
     return true;
 }
 
-void game(int num)
+void game(int num, int a1, int b1)
 {
     string guess; int count = 1;
     cout << "Введите предполагаемое число: ";
@@ -41,11 +41,21 @@ void game(int num)
         int guess1 = stoi(guess);
         if (guess1 < num)
         {
-            cout << "Загаданное число больше.Попробуйте ещё раз." << endl;
+            if (guess1 >= a1 && guess1 <= b1) {
+                cout << "Загаданное число больше.Попробуйте ещё раз." << endl;
+            }
+            else {
+                cout << "Предполагаемое число меньше заданного диапазона. Попробуйте еще раз." << endl;
+            }
         }
         else
         {
-            cout << "Загаданное число меньше.Попробуйте ещё раз." << endl;
+            if (guess1 >= a1 && guess1 <= b1) {
+                cout << "Загаданное число меньше.Попробуйте ещё раз." << endl;
+            }
+            else {
+                cout << "Предполагаемое число больше заданного диапазона. Попробуйте еще раз." << endl;
+            }
         }
         count++;
         cin >> guess;
@@ -55,4 +65,3 @@ void game(int num)
         cout << "Вы выиграли!!!" << endl;
         cout << "Количество попыток: " << count;
     }
-}
