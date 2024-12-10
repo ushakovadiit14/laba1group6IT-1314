@@ -36,6 +36,6 @@ int main() {
         b1 = c;
     }
     num = randomnum(a1, b1);
-    game(num);
+    game(num, a1, b1);
     return 0;
 }
